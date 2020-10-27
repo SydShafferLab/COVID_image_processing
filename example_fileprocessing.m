@@ -17,8 +17,10 @@ dapi_small = imread('dapi.tif','PixelRegion',...
     {[start_h,end_h],... %rows
     [start_w,end_w]}); %columns
 
+imwrite(dapi_small, 'dapi_small.tif');
+
 % Use cut tif to cut as 10 by 10.
-cutTif(10,10,{'dapi'});
+cutTif(10,10,{'dapi_small'});
 
 %%
 
